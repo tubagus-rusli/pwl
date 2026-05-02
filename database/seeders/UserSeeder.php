@@ -24,8 +24,10 @@ class UserSeeder extends Seeder
                 'npm' => $npm,
                 'firstname' => $faker->firstName,
                 'lastname' => $faker->lastName,
-                'email' => $faker->unique()->safeEmail,
+                'email' => 'mahasiswa@gmail.com',
                 'password' => bcrypt('12345678'),
             ]);
+
+            $user->assignRole('mahasiswa');
     }
 }
